@@ -49,6 +49,18 @@ lemma level6_8 (a b c : Nat) : a + (b + 0) + (c + 0)= a + b + c := by --precisio
   rw [add_zero]
   --rfl
 
+lemma level7_8 (a : Nat) : MyNat.succ ( a ) = a + 1 := by
+  rw [one_eq_succ_zero]
+  rw [add_succ]
+  rw [add_zero]
+  -- rfl
 
+lemma level8_8 two + two = 4 := by
+  rw [four_eq_succ_three]
+  nth_rewrite 2 [two_eq_succ_one]
+  rw [add_succ]
+  rw [three_eq_succ_two]
+  rw [\l succ_eq_add_one]
+  -- rfl
 
 end Tutorial_World
